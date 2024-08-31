@@ -20,27 +20,27 @@ export class WorkstreamService {
     let headers = new HttpHeaders({
       'Content-Type': 'application/json',
     });
-    return this.http.post<any>("http://localhost:3001/api/todoops/create", body, {headers: headers});
+    return this.http.post<any>("https://taskboard-ndzjolpn.b4a.run/api/todoops/create", body, {headers: headers});
   }
 
   toDo_getGBacklogs(body:any) {
     let headers = new HttpHeaders({
       'Content-Type': 'application/json',
     });
-    return this.http.post<any>("http://localhost:3001/api/todoops/getTasks", body, {headers: headers});
+    return this.http.post<any>("https://taskboard-ndzjolpn.b4a.run/api/todoops/getTasks", body, {headers: headers});
   }
 
   toDo_addProject(body: any) {
     let headers = new HttpHeaders({
       'Content-Type': 'application/json',
     });
-    return this.http.post<any>("http://localhost:3001/api/todoops/addProject", body, {headers: headers});
+    return this.http.post<any>("https://taskboard-ndzjolpn.b4a.run/api/todoops/addProject", body, {headers: headers});
   }
 
   toDo_getProject() {
     let headers = new HttpHeaders({
       'Content-Type': 'application/json',
     });
-    return this.http.get<any>("http://localhost:3001/api/todoops/getProject", {headers: headers});
+    return this.http.get<any>("https://taskboard-ndzjolpn.b4a.run/api/todoops/getProject", {headers: headers});
   }
 }

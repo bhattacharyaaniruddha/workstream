@@ -21,56 +21,56 @@ export class UserAuthService {
     let headers = new HttpHeaders({
       'Content-Type': 'application/json',
     });
-    return this.http.post<any>("http://localhost:3001/api/userops/addUser", body, {headers: headers});
+    return this.http.post<any>("https://taskboard-ndzjolpn.b4a.run/api/userops/addUser", body, {headers: headers});
   }
 
   toDo_getUsers() {
     let headers = new HttpHeaders({
       'Content-Type': 'application/json',
     });
-    return this.http.get<any>("http://localhost:3001/api/userops/getUsers", {headers: headers});
+    return this.http.get<any>("https://taskboard-ndzjolpn.b4a.run/api/userops/getUsers", {headers: headers});
   }
 
   toDo_addGroup(body: any) {
     let headers = new HttpHeaders({
       'Content-Type': 'application/json',
     });
-    return this.http.post<any>("http://localhost:3001/api/userops/addGroup", body, {headers: headers});
+    return this.http.post<any>("https://taskboard-ndzjolpn.b4a.run/api/userops/addGroup", body, {headers: headers});
   }
 
   toDo_getGroup() {
     let headers = new HttpHeaders({
       'Content-Type': 'application/json',
     });
-    return this.http.get<any>("http://localhost:3001/api/userops/getGroup", {headers: headers});
+    return this.http.get<any>("https://taskboard-ndzjolpn.b4a.run/api/userops/getGroup", {headers: headers});
   }
 
   toDo_getCompanies() {
     let headers = new HttpHeaders({
       'Content-Type': 'application/json',
     });
-    return this.http.get<any>("http://localhost:3001/api/userops/getCompanies", {headers: headers});
+    return this.http.get<any>("https://taskboard-ndzjolpn.b4a.run/api/userops/getCompanies", {headers: headers});
   }
 
   toDo_getAllManagersByCoy() {
     let headers = new HttpHeaders({
       'Content-Type': 'application/json',
     });
-    return this.http.get<any>("http://localhost:3001/api/userops/getAllManagersByCoy", {headers: headers});
+    return this.http.get<any>("https://taskboard-ndzjolpn.b4a.run/api/userops/getAllManagersByCoy", {headers: headers});
   }
 
   toDo_registerNewUser(body: any) {
     let headers = new HttpHeaders({
       'Content-Type': 'application/json',
     });
-    return this.http.post<any>("http://localhost:3001/api/userops/registerNewUser", body, {headers: headers});
+    return this.http.post<any>("https://taskboard-ndzjolpn.b4a.run/api/userops/registerNewUser", body, {headers: headers});
   }
 
   toDo_login(body: any) {
     let headers = new HttpHeaders({
       'Content-Type': 'application/json',
     });
-    return this.http.post<any>("http://localhost:3001/api/userops/login", body, {headers: headers});
+    return this.http.post<any>("https://taskboard-ndzjolpn.b4a.run/api/userops/login", body, {headers: headers});
   }
 
 
