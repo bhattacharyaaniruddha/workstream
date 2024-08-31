@@ -1,0 +1,203 @@
+<div class="container-forms">
+    <div class="container-card" style="width: 1000px;">
+        <div class="shadow" style="display: flex;flex-direction: row;align-items: start;height: 600px;background-color: white;padding: 20px;border-radius: 5px;">
+            <div class="" style="flex: 0.6;width: 100%;padding: 20px;margin-top: -5px;">
+                <div class="logo-section" style="text-align: center;display: flex;align-items: center;justify-content: center;">
+                    <div class="logo-part" style="width: auto;border: 1px dashed lightgray;padding: 5px 20px;">
+                        <img src="https://static.vecteezy.com/system/resources/previews/008/386/422/non_2x/tb-or-bt-initial-letter-logo-design-vector.jpg" class="navbar-image" style="margin-left: -20px;" />
+                        <span class="navbar-logo-text">TaskBoard</span>
+                    </div>
+                </div>
+                <h2 style="font-size: 20px;font-weight: 800;text-align: center;">Hi Welcome!!! Register yourself with us</h2>
+
+                <div class="input-section" style="width: 100%;margin-top: -20px;" [formGroup]="registerForm">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="non-psk" style="width: 100%;position: relative;height: 50px;margin: 15px 0px;">
+                                <label style="position: absolute;
+                                    font-size: 12px;
+                                    color: blue;
+                                    background: transparent;
+                                    left: 10px;
+                                    top: 5px;
+                                ">Full Name</label>
+                                <input formControlName="fullname" type="text" class="input-form" style="width: inherit;" placeholder="Enter full name ..." />
+                                <small style="color: red;
+                                font-size: 10px;
+                                position: absolute;
+                                bottom: -28px;
+                                left: 8px;
+                                font-weight: 500;">Wrong email address</small>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="non-psk" style="width: 100%;position: relative;height: 50px;margin: 15px 0px;">
+                                <label style="position: absolute;
+                                    font-size: 12px;
+                                    color: blue;
+                                    background: transparent;
+                                    left: 10px;
+                                    top: 5px;
+                                ">Username</label>
+                                <input formControlName="username" type="text" class="input-form" style="width: inherit;" placeholder="Enter username ..." />
+                                <small style="color: red;
+                                font-size: 10px;
+                                position: absolute;
+                                bottom: -28px;
+                                left: 8px;
+                                font-weight: 500;">Wrong email address</small>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="non-psk" style="width: 100%;position: relative;height: 50px;margin: 15px 0px;">
+                                <label style="position: absolute;
+                                    font-size: 12px;
+                                    color: blue;
+                                    background: transparent;
+                                    left: 10px;
+                                    top: 5px;
+                                ">Email Address</label>
+                                <input formControlName="email" type="text" class="input-form" style="width: inherit;" placeholder="Enter email address ..." />
+                                <small style="color: red;
+                                font-size: 10px;
+                                position: absolute;
+                                bottom: -28px;
+                                left: 8px;
+                                font-weight: 500;">Wrong email address</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div [ngClass]="(this.registerForm.controls['company'].value === 'Others') ? 'col-lg-4' : 'col-lg-6'">
+                            <div class="non-psk" style="width: 100%;position: relative;height: 50px;margin: 15px 0px;">
+                                <label style="position: absolute;
+                                    font-size: 12px;
+                                    color: blue;
+                                    background: transparent;
+                                    left: 10px;
+                                    top: 5px;
+                                ">Company</label>
+                                <select formControlName="company" class="input-form" style="width: inherit;" placeholder="Select company ...">
+                                    <option>TCS</option>
+                                    <option>Lenovo</option>
+                                    <option>Others</option>
+                                </select>
+                                <small style="color: red;
+                                font-size: 10px;
+                                position: absolute;
+                                bottom: -28px;
+                                left: 8px;
+                                font-weight: 500;">Wrong email address</small>
+                            </div>
+                        </div>
+                        <div [ngClass]="(this.registerForm.controls['company'].value === 'Others') ? 'col-lg-4' : 'col-lg-6'" *ngIf="this.registerForm.controls['company'].value === 'Others'">
+                            <div class="non-psk" style="width: 100%;position: relative;height: 50px;margin: 15px 0px;">
+                                <label style="position: absolute;
+                                    font-size: 12px;
+                                    color: blue;
+                                    background: transparent;
+                                    left: 10px;
+                                    top: 5px;
+                                ">Company Name</label>
+                                <input  formControlName="addNewCompany" type="text" class="input-form" style="width: inherit;" placeholder="Enter company name ..." />
+                                <small style="color: red;
+                                font-size: 10px;
+                                position: absolute;
+                                bottom: -28px;
+                                left: 8px;
+                                font-weight: 500;">Wrong email address</small>
+                            </div>
+                        </div>
+                        <div [ngClass]="(this.registerForm.controls['company'].value === 'Others') ? 'col-lg-4' : 'col-lg-6'">
+                            <div class="non-psk" style="width: 100%;position: relative;height: 50px;margin: 15px 0px;">
+                                <label style="position: absolute;
+                                    font-size: 12px;
+                                    color: blue;
+                                    background: transparent;
+                                    left: 10px;
+                                    top: 5px;
+                                ">Department</label>
+                                <input formControlName="department" type="text" class="input-form" style="width: inherit;" placeholder="Enter department ..." />
+                                <small style="color: red;
+                                font-size: 10px;
+                                position: absolute;
+                                bottom: -28px;
+                                left: 8px;
+                                font-weight: 500;">Wrong email address</small>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-lg-12">
+
+                            <div class="psk" style="width: 100%;position: relative;display: flex;flex-direction: row;height: 50px;margin-top: 30px;">
+                                <label style="position: absolute;
+                                    font-size: 12px;
+                                    color: blue;
+                                    background: transparent;
+                                    left: 10px;
+                                    top: 5px;
+                                ">Password</label>
+                                <input formControlName="password" type="password" class="input-form" style="width: inherit;" placeholder="Enter password ..." />
+                                <button style="height: inherit;
+                                position: absolute;
+                                right: 0;
+                                background: transparent;
+                                border: none;
+                                outline: none;
+                                top: 10px;
+                                display: flex;
+                                align-items: center;
+                                padding: 0px 20px;">
+                                    <span class="material-symbols-outlined">
+                                        visibility
+                                    </span>
+                                </button>
+                                <small style="color: red;
+                                font-size: 10px;
+                                position: absolute;
+                                bottom: -28px;
+                                left: 8px;
+                                font-weight: 500;">Wrong email address</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-section" style="margin-top: 50px;width: 100%;">
+                    <button style="border: none;
+                    outline: none;
+                    height: 50px;
+                    width: 100%;
+                    background: #1376fe;
+                    color: white;
+                    text-transform: uppercase;
+                    font-size: 17px;
+                    border-radius: 5px;" (click)="submit();" [disabled]="registerForm.invalid">Register</button>
+                </div>
+
+                <!-- <div class="" style="width: 100%;text-align: center;margin-top: 20px;">
+                    <a href="#" style="width: 100%; text-align: center;">Forget Password</a>
+                </div> -->
+            </div>
+            <div class="" style="flex: 0.4;width: 100%;height: 100%;
+                background-image: url('https://cdn.dribbble.com/users/299769/screenshots/5682249/task-management-illustration.jpg');
+                background-position: -100px -20px;
+                background-repeat: no-repeat;
+                background-size: cover;
+            ">
+            </div>
+        </div>
+
+        <div class="register-text" style="position: absolute;right: 10px;background-color: white;top: 10px;">
+            <a href="/login">Login</a>
+        </div>
+
+    </div>
+</div>

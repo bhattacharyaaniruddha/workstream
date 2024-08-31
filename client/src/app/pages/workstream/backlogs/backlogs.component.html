@@ -1,0 +1,145 @@
+<table class="table-responsive mt-1 mb-5">
+    <thead>
+        <tr>
+            <td colspan="8"></td>
+            <td colspan="3" style="padding: 0;">
+                <div style="display: flex; flex-direction: row; justify-content: flex-end; align-items: center;">
+                    <div style="padding: 10px;">
+                        <button (click)="navigateRoute()" style="border: 1px solid #dbdbdb74; background-color: transparent; padding: 10px; display: flex; align-items: center;">
+                            <span class="material-symbols-outlined">
+                                add
+                            </span>
+                        </button>
+                    </div>
+                    <div style="padding: 10px;">
+                        <input type="text" class="input-dropdown" placeholder="Search data in grid" style="outline: none;" />
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="th" style="width: 5%;">
+                <span style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;">
+                    <span>Action</span>
+                </span>
+            </td>
+            <td class="th" style="width: 5%;">
+                <span style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;">
+                    <span>Sr. #</span>
+                    <span class="material-symbols-outlined sort-icon">
+                        sort
+                    </span>
+                </span>
+            </td>
+            <td class="th" style="width: 40%;">
+                <span style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;">
+                    <span>Title</span>
+                    <span class="material-symbols-outlined sort-icon">
+                        sort
+                    </span>
+                </span>
+            </td>
+            <td class="th" style="width: 8%;">
+                <span style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;">
+                    <span>Type</span>
+                    <span class="material-symbols-outlined sort-icon">
+                        sort
+                    </span>
+                </span>
+            </td>
+            <td class="th" style="width: 8%;">
+                <span style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;">
+                    <span>Priority</span>
+                    <span class="material-symbols-outlined sort-icon">
+                        sort
+                    </span>
+                </span>
+            </td>
+            <td class="th" style="width: 8%;">
+                <span style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;">
+                    <span>Status</span>
+                    <span class="material-symbols-outlined sort-icon">
+                        sort
+                    </span>
+                </span>
+            </td>
+            <td class="th" style="width: 8%;">
+                <span style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;">
+                    <span>Assignee</span>
+                    <span class="material-symbols-outlined sort-icon">
+                        sort
+                    </span>
+                </span>
+            </td>
+            <td class="th" style="width: 8%;">
+                <span style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;">
+                    <span>Originator</span>
+                    <span class="material-symbols-outlined sort-icon">
+                        sort
+                    </span>
+                </span>
+            </td>
+            <td class="th" style="width: 10%;">
+                <span style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;">
+                    <span>Due Date</span>
+                    <span class="material-symbols-outlined sort-icon">
+                        sort
+                    </span>
+                </span>
+            </td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td style="padding: 0px 0px;"></td>
+            <td style="padding: 0px 0px;"><input type="text" style="padding: 10px 10px;width: 100%;outline: none;border-color: #dbdbdb74;border-bottom: none;border-left: 1px solid #dbdbdb74;border-top: none;" placeholder="search here" /></td>
+            <td style="padding: 0px 0px;"><input type="text" style="padding: 10px 10px;width: 100%;outline: none;border-color: #dbdbdb74;border-bottom: none;border-left: none;border-top: none;" placeholder="search here" /></td>
+            <td style="padding: 0px 0px;"><input type="text" style="padding: 10px 10px;width: 100%;outline: none;border-color: #dbdbdb74;border-bottom: none;border-left: none;border-top: none;" placeholder="search here" /></td>
+            <td style="padding: 0px 0px;"><input type="text" style="padding: 10px 10px;width: 100%;outline: none;border-color: #dbdbdb74;border-bottom: none;border-left: none;border-top: none;" placeholder="search here" /></td>
+            <td style="padding: 0px 0px;"><input type="text" style="padding: 10px 10px;width: 100%;outline: none;border-color: #dbdbdb74;border-bottom: none;border-left: none;border-top: none;" placeholder="search here" /></td>
+            <td style="padding: 0px 0px;"><input type="text" style="padding: 10px 10px;width: 100%;outline: none;border-color: #dbdbdb74;border-bottom: none;border-left: none;border-top: none;" placeholder="search here" /></td>
+            <td style="padding: 0px 0px;"><input type="text" style="padding: 10px 10px;width: 100%;outline: none;border-color: #dbdbdb74;border-bottom: none;border-left: none;border-top: none;" placeholder="search here" /></td>
+            <td style="padding: 0px 0px;"><input type="text" style="padding: 10px 10px;width: 100%;outline: none;border-color: #dbdbdb74;border-bottom: none;border-left: none;border-top: none;border-right: none;" placeholder="search here" /></td>
+            
+            <!-- <td>{{ row.notificationsPreferences }}</td>
+            <td>{{ row.companyName }}</td>
+            <td>{{ row.teamName }}</td> -->
+        </tr>
+        <tr style="border: 1px solid #dbdbdb74;" class="hover-tr" *ngFor="let row of dataSource; let i=index">
+            <td></td>
+            <td>{{ i+1 }}</td>
+            <td>{{ row.taskTitle }}</td>
+            <td>{{ row.type }}</td>
+            <td>{{ row.priority }}</td>
+            <td>{{ row.status }}</td>
+            <td>{{ row.assignee }}</td>
+            <td>{{ row.originator }}</td>
+            <td>{{ row.dueDate }}</td>
+            <!-- <td>{{ row.notificationsPreferences }}</td>
+            <td>{{ row.companyName }}</td>
+            <td>{{ row.teamName }}</td> -->
+        </tr>
+        <tr>
+            <td colspan="9" style="padding: 0;border: 1px solid #dbdbdb74;border-left: none;border-right: none;border-bottom: none;">
+                <div style="display: flex; justify-content: flex-end; align-items: center; padding: 10px;">
+                    <select class="input-dropdown">
+                        <option>5 per page</option>
+                        <option>10 per page</option>
+                        <option>20 per page</option>
+                        <option>50 per page</option>
+                        <option>100 per page</option>
+                    </select>
+                    <span style="text-transform: lowercase;">1-5 of 4000</span>
+                    <span class="material-symbols-outlined" style="margin-left: 10px;padding: 5px;cursor: pointer;">
+                        keyboard_arrow_left
+                    </span>
+                    <span class="material-symbols-outlined" style="margin-left: 5px;padding: 5px;cursor: pointer;">
+                        keyboard_arrow_right
+                    </span>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,30 @@
+<!-- header -->
+
+<!-- container -->
+    <!-- sidenav -->    
+    <!-- content holder -->
+    <!-- footer -->
+
+
+    <div class="master-container" *ngIf="!(router.url.includes('login') || router.url.includes('register'))" style="display: block;">
+      <div class="header shadow">
+          <app-navbar></app-navbar>
+      </div>
+      <div class="secondary-container">
+          <div class="sidenav">
+              <app-sidebar></app-sidebar>
+          </div>
+          <div class="content-holder">
+              <div class="container-fluid container-main">
+                <router-outlet></router-outlet>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <div class=""  *ngIf="(router.url.includes('login') || router.url.includes('register'))">
+    <router-outlet></router-outlet>
+  </div>
+  <!-- <app-login></app-login> -->
+
+  <!-- <app-register></app-register> -->

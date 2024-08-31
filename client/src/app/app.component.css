@@ -1,0 +1,29 @@
+.header {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.secondary-container {
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: row;
+}
+
+.sidenav {
+    background-color: #e9e9e9;
+    height: calc(100vh - 50px);
+    flex: 0.18;
+}
+
+.content-holder {
+    height: calc(100vh - 50px);
+    flex: 0.82;
+    background-color: #f7f9fb;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.container-main {
+    padding: 10px 10px;
+}

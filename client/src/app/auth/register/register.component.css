@@ -1,0 +1,55 @@
+.container-forms {
+    background-color: #63a4ff;
+    background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.container-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    width: 1000px;
+    height: auto;
+}
+
+.logo-part {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: -12px;
+    flex: 0.18;
+    /* background-color: red; */
+}
+
+
+.navbar-image {
+    height: 50px;
+}
+
+.input-form {
+    height: 50px;
+    width: inherit;
+    background: #f7f8f9;
+    width: inherit;
+    outline: none;
+    border: 1px solid #d3d3d31a;
+    border-radius: 5px;
+    padding: 0px 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.navbar-logo-text {
+    color: #0078d4;
+    font-weight: 560;
+    font-size: 19px;
+}
+
+small {
+    display: none;
+}

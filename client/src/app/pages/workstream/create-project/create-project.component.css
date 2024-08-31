@@ -1,0 +1,30 @@
+.input-width-project {
+    width: 100%;
+}
+
+.btn-for-cancel {
+    background-color: white;
+    color: #f0e001 !important;
+    border: 2px solid #f0e001;
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 0px;
+    margin-right: 20px;
+}
+
+.btn-for-cancel:hover {
+    background-color: yellow;
+    color: black !important;
+    border: 2px solid black;
+}
+
+.btn-for-submit {
+    background-color: #1463bd;
+    color: #fff !important;
+    border: 2px solid #1463bd;
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 0px;
+}

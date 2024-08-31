@@ -1,0 +1,148 @@
+<div class="shadow">
+    <h2 *ngIf="data['popupName']=='addUser'" mat-dialog-title>Add User</h2>
+    <h2 *ngIf="data['popupName']=='addGroup'" mat-dialog-title>Add Group</h2>
+    <mat-dialog-content>
+        <div *ngIf="data['popupName']=='addUser'" class="container" [formGroup]="addUserForm">
+            <div class="row">
+                <div class="col-lg-6">
+                    <mat-form-field appearance="outline" style="width: 100%;">
+                        <mat-label>FullName</mat-label>
+                        <input type="text" formControlName="fullname" class="input-width-project" matInput placeholder="Placeholder">
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                        <!-- <mat-hint>Hint</mat-hint> -->
+                    </mat-form-field>
+                </div>
+                <div class="col-lg-6">
+                    <mat-form-field appearance="outline" style="width: 100%;">
+                        <mat-label>Username</mat-label>
+                        <input type="text" formControlName="username" class="input-width-project" matInput placeholder="Placeholder">
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                        <!-- <mat-hint>Hint</mat-hint> -->
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <mat-form-field appearance="outline" style="width: 100%;">
+                        <mat-label>Email</mat-label>
+                        <input type="email" formControlName="email" class="input-width-project" matInput placeholder="Placeholder">
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                        <!-- <mat-hint>Hint</mat-hint> -->
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- <div class="col-lg-4">
+                    <mat-form-field appearance="outline"  style="width: 100%;">
+                        <mat-label>role</mat-label>
+                        <mat-select formControlName="role">
+                          @for (topping of toppingList; track topping) {
+                            <mat-option [value]="topping">{{topping}}</mat-option>
+                          }
+                        </mat-select>
+                      </mat-form-field>
+                </div> -->
+                <div  [ngClass]="(this.addUserForm.controls['company'].value === 'Others') ? 'col-lg-4' : 'col-lg-6'">
+                    <mat-form-field appearance="outline"  style="width: 100%;">
+                        <mat-label>Company</mat-label>
+                        <mat-select formControlName="company">
+                          @for (company of companyList; track company) {
+                            <mat-option [value]="company">{{company}}</mat-option>
+                          }
+                        </mat-select>
+                        
+                      </mat-form-field>
+                </div>
+                <div [ngClass]="(this.addUserForm.controls['company'].value === 'Others') ? 'col-lg-4' : 'col-lg-6'" *ngIf="this.addUserForm.controls['company'].value === 'Others'">
+                    <mat-form-field appearance="outline" style="width: 100%;">
+                        <mat-label>Add company</mat-label>
+                        <input type="text" formControlName="addNewCompany" class="input-width-project" matInput placeholder="Placeholder">
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                        <!-- <mat-hint>Hint</mat-hint> -->
+                    </mat-form-field>
+                </div>
+                <div  [ngClass]="(this.addUserForm.controls['company'].value === 'Others') ? 'col-lg-4' : 'col-lg-6'">
+                    <mat-form-field appearance="outline" style="width: 100%;">
+                        <mat-label>Department</mat-label>
+                        <input type="text" formControlName="department" class="input-width-project" matInput placeholder="Placeholder">
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                        <!-- <mat-hint>Hint</mat-hint> -->
+                    </mat-form-field>
+                </div>
+                
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <mat-form-field appearance="outline" style="width: 100%;">
+                        <mat-label>Location</mat-label>
+                        <input type="text" formControlName="location" class="input-width-project" matInput placeholder="Placeholder">
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                        <!-- <mat-hint>Hint</mat-hint> -->
+                    </mat-form-field>
+                </div>
+                <div class="col-lg-6">
+                    <mat-form-field appearance="outline" style="width: 100%;">
+                        <mat-label>Job Title</mat-label>
+                        <input type="text" formControlName="jobTitle" class="input-width-project" matInput placeholder="Placeholder">
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                        <!-- <mat-hint>Hint</mat-hint> -->
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <mat-checkbox formControlName="isManager" class="example-margin">Check if you are a manager</mat-checkbox>
+                </div>
+                <div class="col-lg-6">
+                    <mat-checkbox formControlName="isEnabled" class="example-margin">Enabled</mat-checkbox>
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-lg-12">
+                    <mat-form-field appearance="outline" style="width: 100%;">
+                        <mat-label>Password</mat-label>
+                        <input type="password" formControlName="password" class="input-width-project" matInput placeholder="Placeholder">
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                        <!-- <mat-hint>Hint</mat-hint> -->
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="data['popupName']=='addGroup'" class="container" [formGroup]="addGroupForm">
+            <div class="row">
+                <div class="col-lg-12">
+                    <mat-form-field appearance="outline" style="width: 100%;">
+                        <mat-label>Group Name</mat-label>
+                        <input type="text" formControlName="groupName" class="input-width-project" matInput placeholder="Placeholder">
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                        <!-- <mat-hint>Hint</mat-hint> -->
+                    </mat-form-field>
+                </div>
+                <div class="col-lg-12">
+                    <mat-form-field appearance="outline"  style="width: 100%;">
+                        <mat-label>Users</mat-label>
+                        <mat-select formControlName="allUsers" multiple>
+                          @for (user of allUsersList; track user) {
+                            <mat-option [value]="user._id">{{user.fullName}} &lt;{{user.email}}&gt;</mat-option>
+                          }
+                        </mat-select>
+                      </mat-form-field>
+                </div>
+            </div>
+        </div>
+
+
+
+        
+    </mat-dialog-content>
+    <mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+    <button mat-button cdkFocusInitial (click)="submit();">Ok</button>
+    </mat-dialog-actions>
+</div>

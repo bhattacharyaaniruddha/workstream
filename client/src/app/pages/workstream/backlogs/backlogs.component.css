@@ -1,0 +1,41 @@
+table {
+    width: 100%;
+    border: none;
+    overflow: scroll;
+}
+
+tr {
+    background-color: #ffffff;
+    font-size: 12px;
+}
+
+.th {
+    padding: 10px 10px;
+    color: #676767;
+    font-weight: 420 !important;
+    text-transform: capitalize;
+    border: 1px solid #dbdbdb74;
+}
+
+td {
+    padding: 10px 10px;
+    color: #676767;
+    font-weight: 420 !important;
+    text-transform: capitalize;
+}
+
+.hover-tr:hover {
+    background-color: #edf7ff;
+    cursor: pointer;
+}
+
+.sort-icon {
+    font-size: 14px;
+    margin-left: 10px;
+    font-weight: 860;
+}
+
+.input-dropdown {
+    padding: 5px 10px;
+    margin-right: 10px;
+}

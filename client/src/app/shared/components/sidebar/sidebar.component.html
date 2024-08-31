@@ -1,0 +1,75 @@
+<div class="sidebar-item">
+    <div class="sidebar-item-header">
+        <div class="sidebar-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/2304/2304226.png" class="sidebar-icon-image" />
+            <span class="material-symbols-outlined sidebar-active-icon">
+                    check
+            </span>
+        </div>
+        <span class="sidebar-text">Admin</span>
+    </div>
+    <div class="sidebar-item-submenu">
+
+        <div class="submenu-items">
+            <a href="/app/user-management" style="text-decoration: none;">
+                <div class="sidebar-item-submenu-header">
+                    <div class="sidebar-icon">
+                        <span [ngStyle]="{'color': (router.url.includes('/app/user-management')) ? 'black' : ''}"  class="material-symbols-outlined icon-submenu">
+                            manage_accounts
+                        </span>
+                    </div>
+                    <span [ngStyle]="{'font-weight': (router.url.includes('/app/user-management')) ? '500' : '', 'color': (router.url.includes('/app/user-management')) ? 'black' : ''}" class="sidebar-submenu-text">User Management</span>
+                </div>
+            </a>
+            <a href="/app/group-management" style="text-decoration: none;">
+                <div class="sidebar-item-submenu-header">
+                    <div class="sidebar-icon">
+                        <span [ngStyle]="{'color': (router.url.includes('/app/group-management')) ? 'black' : ''}"  class="material-symbols-outlined icon-submenu">
+                            group_add
+                        </span>
+                    </div>
+                    <span [ngStyle]="{'font-weight': (router.url.includes('/app/group-management')) ? '500' : '', 'color': (router.url.includes('/app/group-management')) ? 'black' : ''}" class="sidebar-submenu-text">Group Management</span>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<div class="sidebar-item active-panel">
+    <div class="sidebar-item-header">
+        <div class="sidebar-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/6188/6188732.png" class="sidebar-icon-image" />
+            <span class="material-symbols-outlined sidebar-active-icon">
+                    check
+            </span>
+        </div>
+        <span class="sidebar-text">Workstream</span>
+    </div>
+    <div class="sidebar-item-submenu">
+
+        <div class="submenu-items">
+            <a href="/app/project-dashboard" style="text-decoration: none;">
+                <div class="sidebar-item-submenu-header">
+                    <div class="sidebar-icon">
+                        <span [ngStyle]="{'color': (router.url.includes('/app/project-dashboard')) ? 'black' : ''}" class="material-symbols-outlined icon-submenu">
+                            dashboard
+                        </span>
+                    </div>
+                    <span [ngStyle]="{'font-weight': (router.url.includes('/app/project-dashboard')) ? '500' : '', 'color': (router.url.includes('/app/project-dashboard')) ? 'black' : ''}" class="sidebar-submenu-text">Project Dashboard</span>
+                </div>
+            </a>
+            <a (click)="calculateURL();" style="text-decoration: none;" *ngIf="router.url.includes('/app/projects/')">
+                <div class="sidebar-item-submenu-header">
+                    <div class="sidebar-icon">
+                        <span [ngStyle]="{'color': (router.url.includes('/app/projects/')) ? 'black' : ''}" class="material-symbols-outlined icon-submenu">
+                            checklist
+                        </span>
+                    </div>
+                    <span [ngStyle]="{'font-weight': (router.url.includes('/app/projects/')) ? '500' : '', 'color': (router.url.includes('/app/projects/')) ? 'black' : ''}" class="sidebar-submenu-text">Backlogs</span>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</div>

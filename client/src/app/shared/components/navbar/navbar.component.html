@@ -1,0 +1,39 @@
+<div class="navbar">
+    <div class="logo-part">
+        <img src="https://static.vecteezy.com/system/resources/previews/008/386/422/non_2x/tb-or-bt-initial-letter-logo-design-vector.jpg" class="navbar-image" />
+        <span class="navbar-logo-text">TaskBoard</span>
+    </div>
+
+    <div class="except-logo">
+        <div class="project-info">
+            <!-- <span>projectowner</span>
+            <span>/</span>
+            <span>project_name</span> -->
+            <!-- <span>{{ title }}</span> -->
+        </div>
+    
+        <div class="account-center" style="position: relative;">
+            <div class="bell" (click)="toggleDropdown('notifications')">
+                <span class="material-symbols-outlined">notifications</span>
+                <span class="small-text-not">{{ notifications.length }}</span>
+            </div>
+            <div (click)="toggleDropdown('logout')" class="account">
+                <span>{{ displayName }}</span>
+            </div>
+        
+            <div class="dropdown-tray shadow" *ngIf="isDropdownVisible" [ngStyle]="{'width': (dropdownContent === 'logout') ? '100px': '300px', 'height': (dropdownContent === 'logout') ? 'auto': '350px' }">
+                <div style="padding: 5px 10px; display: flex; align-items: center; cursor: pointer;" (click)="handleDropdownClick()">
+                    <div  *ngIf="dropdownContent === 'notifications'">
+                        <p [innerHTML]="notification" class="items-drowdown-tray" style="text-align: justify; font-size: 10px;" *ngFor="let notification of notifications">
+                            
+                        </p>
+                    </div>
+                    <div class="" *ngIf="dropdownContent === 'logout'">
+                        <span style="text-align: justify; font-size: 10px;">Logout</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

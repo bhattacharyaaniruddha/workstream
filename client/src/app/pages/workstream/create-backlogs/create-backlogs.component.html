@@ -1,0 +1,246 @@
+<div class="container mt-2" style="background-color: transparent;padding: 20px;">
+
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" style="height: 40px;background-color: #0078d4;color: white;" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Workstream Essentials
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushExample">
+                <div class="" style="padding: 10px;" [formGroup]="addTaskForm">
+                    <div class="row mt-2">
+                        <div class="col-lg-3">
+                            <mat-form-field appearance="outline" style="width: 100%;">
+                                <mat-label>Title</mat-label>
+                                <input formControlName="title" class="input-width-project" matInput placeholder="Placeholder">
+                                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                                <!-- <mat-hint>Hint</mat-hint> -->
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-3">
+                            <mat-form-field appearance="outline" style="width: 100%;">
+                                <mat-label>Originator</mat-label>
+                                <input formControlName="originator" class="input-width-project" matInput placeholder="Placeholder" readonly>
+                                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                                <!-- <mat-hint>Hint</mat-hint> -->
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-3">
+                            <mat-form-field appearance="outline" style="width: 100%;">
+                                <mat-label>Priority</mat-label>
+                                <mat-select formControlName="priority">
+                                    <mat-option *ngFor="let priority of priorityList" [value]="priority">{{ priority }}</mat-option>
+                                </mat-select>
+                                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                                <!-- <mat-hint>Hint</mat-hint> -->
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-3">
+                            <mat-form-field appearance="outline" style="width: 100%;">
+                                <mat-label>Created On</mat-label>
+                                <input formControlName="createdOn" class="input-width-project" matInput placeholder="Placeholder" readonly>
+                                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                                <!-- <mat-hint>Hint</mat-hint> -->
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-lg-12">
+                            <mat-form-field appearance="outline" style="width: 100%;">
+                                <mat-label>Description</mat-label>
+                                <textarea formControlName="description" style="height: 80px;resize: none;" class="input-width-project" matInput
+                                    placeholder="Placeholder"></textarea>
+                                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                                <!-- <mat-hint>Hint</mat-hint> -->
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-lg-4">
+                            <mat-form-field appearance="outline" style="width: 100%;">
+                                <mat-label>Type</mat-label>
+                                <mat-select formControlName="type">
+                                    <mat-option *ngFor="let type of typeList" [value]="type">{{ type }}</mat-option>
+                                </mat-select>
+                                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                                <!-- <mat-hint>Hint</mat-hint> -->
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-4">
+                            <mat-form-field appearance="outline" style="width: 100%;">
+                                <mat-label>Area of concern</mat-label>
+                                <input formControlName="areaOfConcern" class="input-width-project" matInput placeholder="Placeholder">
+                                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                                <!-- <mat-hint>Hint</mat-hint> -->
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-4">
+                            <mat-form-field appearance="outline" style="width: 100%;">
+                                <mat-label>Reviewers</mat-label>
+                                <input formControlName="reviewers" class="input-width-project" matInput placeholder="Placeholder">
+                                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                                <!-- <mat-hint>Hint</mat-hint> -->
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-lg-12">
+                            <mat-form-field appearance="outline" style="width: 100%;">
+                                <mat-label>Comments</mat-label>
+                                <textarea  formControlName="comments" style="height: 80px;resize: none;" class="input-width-project" matInput
+                                    placeholder="Placeholder"></textarea>
+                                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                                <!-- <mat-hint>Hint</mat-hint> -->
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" style="height: 40px;background-color: #0078d4;color: white;" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Add Attachments
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+                    <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this
+                    being filled with some actual content.
+                </div>
+            </div>
+        </div> -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" style="height: 40px;background-color: #0078d4;color: white;" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Add Task Breakups
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="container">
+                    <table class="table-responsive mt-1 mb-5">
+                        <thead>
+                            <tr>
+                                <td colspan="5" style="padding: 0;">
+                                    <div style="display: flex; justify-content: flex-end; align-items: center; padding: 10px;">
+                                        <button (click)="showAddCheckFlag=true;" style="border: 1px solid #dbdbdb74;background-color: transparent;padding: 10px 10px;text-align: center;display: flex;align-items: center;">
+                                            <span class="material-symbols-outlined">
+                                                add
+                                            </span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="th" style="width: 5%;">
+                                    <span style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;">
+                                        <span>Sr. #</span>
+                                        <span class="material-symbols-outlined sort-icon">
+                                            sort
+                                        </span>
+                                    </span>
+                                </td>
+                                <td class="th" style="width: 40%;">
+                                    <span style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;">
+                                        <span>Title</span>
+                                        <span class="material-symbols-outlined sort-icon">
+                                            sort
+                                        </span>
+                                    </span>
+                                </td>
+                                <td class="th" style="width: 40%;">
+                                    <span style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;">
+                                        <span>Description</span>
+                                        <span class="material-symbols-outlined sort-icon">
+                                            sort
+                                        </span>
+                                    </span>
+                                </td>
+                                <td class="th" style="width: 10%;">
+                                    <span style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;">
+                                        <span>Type</span>
+                                        <span class="material-symbols-outlined sort-icon">
+                                            sort
+                                        </span>
+                                    </span>
+                                </td>
+                                <td class="th" style="width: 5%;">
+                                    <span style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;">
+                                        <span>Action</span>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr *ngIf="!showAddCheckFlag">
+                                <td style="padding: 0px 0px;"><input type="text" style="padding: 10px 10px;width: 100%;outline: none;border-color: #dbdbdb74;border-bottom: none;border-left: 1px solid #dbdbdb74;border-top: none;" placeholder="search here" /></td>
+                                <td style="padding: 0px 0px;"><input type="text" style="padding: 10px 10px;width: 100%;outline: none;border-color: #dbdbdb74;border-bottom: none;border-left: none;border-top: none;" placeholder="search here" /></td>
+                                <td style="padding: 0px 0px;"><input type="text" style="padding: 10px 10px;width: 100%;outline: none;border-color: #dbdbdb74;border-bottom: none;border-left: none;border-top: none;" placeholder="search here" /></td>
+                                <td style="padding: 0px 0px;"><input type="text" style="padding: 10px 10px;width: 100%;outline: none;border-color: #dbdbdb74;border-bottom: none;border-left: none;border-top: none;border-right: none;" placeholder="search here" /></td>
+                                <td style="padding: 0px 0px;border: 1px solid #dbdbdb74;"></td>
+                            </tr>
+                            <tr *ngIf="showAddCheckFlag" [formGroup]="formForAddCheckList">
+                                <td style="padding: 0px 0px;"></td>
+                                <td style="padding: 0px 0px;"><input type="text" style="padding: 10px 10px;width: 100%;outline: none;border-color: #dbdbdb74;border-bottom: none;border-left: none;border-top: none;" formControlName="title" placeholder="Enter Title" /></td>
+                                <td style="padding: 0px 0px;"><input type="text" style="padding: 10px 10px;width: 100%;outline: none;border-color: #dbdbdb74;border-bottom: none;border-left: none;border-top: none;" formControlName="description" placeholder="Enter Description" /></td>
+                                <td style="padding: 0px 0px;"><select style="padding: 10px 10px;width: 100%;outline: none;border-color: #dbdbdb74;border-bottom: none;border-left: none;border-top: none;border-right: none;" formControlName="type" placeholder="Enter Type">
+                                    <option *ngFor="let type of typeList" [value]="type">{{ type }}</option>
+                                </select></td>
+                                <td style="padding: 0px 10px;border: 1px solid #dbdbdb74;">
+                                    <span (click)="addToCheckList();" style="color: blue;text-decoration: underline;cursor: pointer;">Save</span>
+                                    <span> | </span>
+                                    <span (click)="formForAddCheckList.reset();showAddCheckFlag=false;" style="color: red;text-decoration: underline;cursor: pointer;">Discard</span>
+                                </td>
+                            </tr>
+                            <tr style="border: 1px solid #dbdbdb74;" class="hover-tr" *ngFor="let looper of checkLists; let i = index;">
+                                <td>{{ i + 1 }}</td>
+                                <td>{{ looper['title'] }}</td>
+                                <td>{{ looper['description'] }}</td>
+                                <td>{{ looper['type'] }}</td>
+                                <td>
+                                    <span>Edit</span>
+                                </td>
+                                <!-- <td>{{ row.notificationsPreferences }}</td>
+                                <td>{{ row.companyName }}</td>
+                                <td>{{ row.teamName }}</td> -->
+                            </tr>
+                            <tr>
+                                <td colspan="9" style="padding: 0;border: 1px solid #dbdbdb74;border-left: none;border-right: none;border-bottom: none;">
+                                    <div style="display: flex; justify-content: flex-end; align-items: center; padding: 10px;">
+                                        <select class="input-dropdown">
+                                            <option>5 per page</option>
+                                            <option>10 per page</option>
+                                            <option>20 per page</option>
+                                            <option>50 per page</option>
+                                            <option>100 per page</option>
+                                        </select>
+                                        <span style="text-transform: lowercase;">1-5 of 4000</span>
+                                        <span class="material-symbols-outlined" style="margin-left: 10px;padding: 5px;cursor: pointer;">
+                                            keyboard_arrow_left
+                                        </span>
+                                        <span class="material-symbols-outlined" style="margin-left: 5px;padding: 5px;cursor: pointer;">
+                                            keyboard_arrow_right
+                                            
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="" style="padding: 10px 20px;;background-color: white;bottom: 50px;height: 100px;display: flex;flex-direction: row;align-items: center;width: 100%;justify-content: end;">
+        <button (click)="discard()" mat-button class="btn-for-cancel">Discard</button>
+        <button mat-button class="btn-for-submit" (click)="submit()">Submit</button>
+    </div>
+</div>

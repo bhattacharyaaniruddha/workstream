@@ -1,0 +1,148 @@
+<table class="table-responsive mt-1 mb-5">
+    <thead>
+        <tr>
+            <td colspan="8"></td>
+            <td colspan="3" style="padding: 0;">
+                <div style="display: flex; flex-direction: row; justify-content: flex-end; align-items: center;">
+                    <div style="padding: 10px;">
+                        <button (click)="openDialog();" style="border: 1px solid #dbdbdb74; background-color: transparent; padding: 10px; display: flex; align-items: center;">
+                            <span class="material-symbols-outlined">
+                                add
+                            </span>
+                        </button>
+                    </div>
+                    <div style="padding: 10px;">
+                        <input type="text" class="input-dropdown" placeholder="Search data in grid" style="outline: none;" />
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="th">
+                <span style="display: flex; align-items: center; justify-content: space-between;">
+                    <span>Action</span>
+                </span>
+            </td>
+            <td class="th">
+                <span style="display: flex; align-items: center; justify-content: space-between;">
+                    <span>Enabled</span>
+                    <span class="material-symbols-outlined sort-icon">
+                        sort
+                    </span>
+                </span>
+            </td>
+            <td class="th">
+                <span style="display: flex; align-items: center; justify-content: space-between;">
+                    <span>User Name</span>
+                    <span class="material-symbols-outlined sort-icon">
+                        sort
+                    </span>
+                </span>
+            </td>
+            <td class="th">
+                <span style="display: flex; align-items: center; justify-content: space-between;">
+                    <span>Full Name</span>
+                    <span class="material-symbols-outlined sort-icon">
+                        sort
+                    </span>
+                </span>
+            </td>
+            <td class="th">
+                <span style="display: flex; align-items: center; justify-content: space-between;">
+                    <span>Email</span>
+                    <span class="material-symbols-outlined sort-icon">
+                        sort
+                    </span>
+                </span>
+            </td>
+            <td class="th">
+                <span style="display: flex; align-items: center; justify-content: space-between;">
+                    <span>Company</span>
+                    <span class="material-symbols-outlined sort-icon">
+                        sort
+                    </span>
+                </span>
+            </td>
+            <td class="th">
+                <span style="display: flex; align-items: center; justify-content: space-between;">
+                    <span>Department</span>
+                    <span class="material-symbols-outlined sort-icon">
+                        sort
+                    </span>
+                </span>
+            </td>
+            <td class="th">
+                <span style="display: flex; align-items: center; justify-content: space-between;">
+                    <span>Job Title</span>
+                    <span class="material-symbols-outlined sort-icon">
+                        sort
+                    </span>
+                </span>
+            </td>
+            <td class="th">
+                <span style="display: flex; align-items: center; justify-content: space-between;">
+                    <span>Manager</span>
+                    <span class="material-symbols-outlined sort-icon">
+                        sort
+                    </span>
+                </span>
+            </td>
+            <td class="th">
+                <span style="display: flex; align-items: center; justify-content: space-between;">
+                    <span>Date Created</span>
+                    <span class="material-symbols-outlined sort-icon">
+                        sort
+                    </span>
+                </span>
+            </td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td style="padding: 0;"></td>
+            <td style="padding: 0;"><input type="text" style="padding: 10px; width: 100%; outline: none; border-color: #dbdbdb74; border-bottom: none; border-left: none; border-top: none;border-left: 1px solid #dbdbdb74;" placeholder="search here" /></td>
+            <td style="padding: 0;"><input type="text" style="padding: 10px; width: 100%; outline: none; border-color: #dbdbdb74; border-bottom: none; border-left: none; border-top: none;" placeholder="search here" /></td>
+            <td style="padding: 0;"><input type="text" style="padding: 10px; width: 100%; outline: none; border-color: #dbdbdb74; border-bottom: none; border-left: none; border-top: none;" placeholder="search here" /></td>
+            <td style="padding: 0;"><input type="text" style="padding: 10px; width: 100%; outline: none; border-color: #dbdbdb74; border-bottom: none; border-left: none; border-top: none;" placeholder="search here" /></td>
+            <td style="padding: 0;"><input type="text" style="padding: 10px; width: 100%; outline: none; border-color: #dbdbdb74; border-bottom: none; border-left: none; border-top: none;" placeholder="search here" /></td>
+            <td style="padding: 0;"><input type="text" style="padding: 10px; width: 100%; outline: none; border-color: #dbdbdb74; border-bottom: none; border-left: none; border-top: none;" placeholder="search here" /></td>
+            <td style="padding: 0;"><input type="text" style="padding: 10px; width: 100%; outline: none; border-color: #dbdbdb74; border-bottom: none; border-left: none; border-top: none;" placeholder="search here" /></td>
+            <td style="padding: 0;"><input type="text" style="padding: 10px; width: 100%; outline: none; border-color: #dbdbdb74; border-bottom: none; border-left: none; border-top: none; border-right: none;" placeholder="search here" /></td>
+            <td style="padding: 0;"><input type="text" style="padding: 10px; width: 100%; outline: none; border-color: #dbdbdb74; border-bottom: none; border-left: none; border-top: none;" placeholder="search here" /></td>
+        </tr>
+        <tr style="border: 1px solid #dbdbdb74;" class="hover-tr" *ngFor="let row of dataSource">
+            <td></td>
+            <td>{{ row.enabled }}</td>
+            <td>{{ row.username }}</td>
+            <td>{{ row.fullName }}</td>
+            <td style="text-transform: lowercase;">{{ row.email }}</td>
+            <td>{{ row.company }}</td>
+            <td>{{ row.department }}</td>
+            <td>{{ row.jobTitle }}</td>
+            <td>{{ row.isManager }}</td>
+            <td>{{ row.dateCreated }}</td>
+        </tr>
+        <tr>
+            <td colspan="11" style="padding: 0; border: 1px solid #dbdbdb74; border-left: none; border-right: none; border-bottom: none;">
+                <div style="display: flex; justify-content: flex-end; align-items: center; padding: 10px;">
+                    <select class="input-dropdown">
+                        <option>5 per page</option>
+                        <option>10 per page</option>
+                        <option>20 per page</option>
+                        <option>50 per page</option>
+                        <option>100 per page</option>
+                    </select>
+                    <span style="text-transform: lowercase;">1-5 of 4000</span>
+                    <span class="material-symbols-outlined" style="margin-left: 10px; padding: 5px; cursor: pointer;">
+                        keyboard_arrow_left
+                    </span>
+                    <span class="material-symbols-outlined" style="margin-left: 5px; padding: 5px; cursor: pointer;">
+                        keyboard_arrow_right
+                    </span>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
