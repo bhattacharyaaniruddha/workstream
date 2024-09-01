@@ -14,7 +14,7 @@ export class NotificationService {
   notificationData = this.notification.asObservable();
 
   constructor(private workStreamService: WorkstreamService, private authService: UserAuthService) {
-    this.socket = io('http://localhost:3001', {
+    this.socket = io('https://taskboard-ndzjolpn.b4a.run', {
       transports: ['websocket'], // Specify the transport method
       reconnection: true,        // Enable reconnection
     });

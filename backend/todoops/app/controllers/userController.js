@@ -58,6 +58,7 @@ const controller = {
     },
     login: async (req, res) => {
         try {
+            console.log("xxxx")
             const result = await service.login(req, res);
             res.status(201).send(result);
         } catch(err) {
